@@ -1,0 +1,12 @@
+[Unit]
+Description=Kodi For Alice Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/myapp.py
+Restart=always
+User=myappuser
+WorkingDirectory=/path/to
+
+[Install]
+WantedBy=multi-user.target
