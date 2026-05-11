@@ -3,10 +3,10 @@ Description=Kodi For Alice Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /path/to/myapp.py
+User=kodiforalice
+WorkingDirectory=/srv/kodiforalice
+ExecStart=/srv/kodiforalice/venv/bin/python /srv/kodiforalice/myapp.py
 Restart=always
-User=myappuser
-WorkingDirectory=/path/to
 
 [Install]
 WantedBy=multi-user.target
